@@ -1,0 +1,26 @@
+header{
+  background-color: rgb(6, 6, 141);
+  background-image: url(Calculadora.jpg);
+  background-position: right;
+  background-size: 650px 200px;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Arimo', sans-serif;
+}
+body{
+  background: aquamarine;
+  font-family: 'Merriweather', serif;
+  background-image: url(4.jpg);
+  background-position: right;
+  background-repeat: 
+  }
+  p{
+    color: rgb(209, 72, 18); 
+  }
+  strong{
+    color : rgb(197, 2, 2)
+  }
+  section {
+    color: green;
+    margin: 20px;
+  }
