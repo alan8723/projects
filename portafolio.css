@@ -4,27 +4,128 @@ body{
 }
 
 header{
-  background: gray;
+  background-color: rgb(6, 0, 43);  align-items: center;
+  color: white;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-a{
-  color: rgb(179, 179, 179);
-  text-decoration-line: none;
+header img{
+  height: 70px;
+}
+
+header a{
+  color: #ffffff;
+  text-decoration: none;
+  align-content: center;
+  height: inherit;
+  padding: 0 5px;
+  display: flex;
+}
+
+figure{
+  margin: 0;
+}
+
+ol,
+ul{
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+li{
+  height: inherit;
 }
 
 h1{
-  font-family: 'Bitter', serif;
-  margin-top: 0;
+  color: white;
+  margin: 0 70px 0 10px;
+  padding: 50px;
 }
 
 h1 strong{
-color: rgb(6, 6, 109); 
+  color: rgb(1, 0, 15);
+color: rgb(182, 60, 3); 
 }
 
-section{
-  padding: 10px 20px;
-  border: 1px solid;
-  margin: 20px;
-  border-radius: 20px;
-  border-color: gray;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Libre Baskerville', serif;
 }
+
+.hero{
+  display: flex;
+  margin-top: 0; 
+  height: 300px;
+  /*background-image: url(imagenes/logoW.jpg);*/
+  background-color: rgb(6, 0, 43);
+  background-size: 500px 300px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.project{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-details{
+  background-color: #f4fbff;
+  width: 400px;
+  margin: 10px;
+  text-align: center;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.project a{
+  color: rgb(185, 4, 4);
+  padding: 2px 6px;
+  border: 1px solid;
+  border-radius: 5px; 
+  text-decoration: none;
+}
+
+.container{
+  /*border: 1px solid red;*/
+  width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+.contact{
+  display: flex;
+  background-color: aqua;
+}
+
+/*.social-link{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  background-size: 400px;
+}
+
+.social-link.instagram{
+  background-image: url(imagenes/instagram.svg);
+}
+.social-link.github{
+  background-image: url(imagenes/github.svg);
+}
+.social-link.facebook{
+  background-image: url(imagenes/facebook.svg);
+}*/
