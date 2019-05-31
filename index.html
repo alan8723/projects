@@ -11,15 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="icon-container">
-        <i class="icon-list2" id="burgerMenu"></i>
+    <div class="icon-container" id="burgerMenu">
+        <i class="icon-list2"></i>
     </div>
     <header>
     <div class="container">
         <figure>
             <img src="imagenes/logoW.jpg" >
         </figure>
-        <nav class="menu">
+        <nav class="menu" id="menu">
             <ol>
                 <ul>
                     <li>
@@ -113,32 +113,29 @@
         </div>
     </div> 
     <script>
-    const menu = document.querySelector('.menu')
-    const burgerMenu = document.getElementById('#burgerMenu')
+        const ipad = window.matchMedia('screen and (max-width: 767px)')
+        const burgerMenu = document.getElementById('burgerMenu')
+        const menu = document.getElementById('menu')
 
-    const ipad = window.matchMedia('screen and (max-width: 480px)')
+        ipad.addListener(validation)
 
-    addEventListener('click', ver)
-
-    ipad.addListener(validation)
-
-    function validation (event) {
-      if (event.matches){
-    burgerMenu.addEventListener('click', ver)
-      }else{
-    burgerMenu.removeEventListener('click', ver)
+        function validation(event) {
+        if (event.matches) {
+          burgerMenu.addEventListener('click', ver)
+        } else {
+          burgerMenu.removeEventListener('click', ver)
+        }
       }
-    }
 
-    validation(ipad)
+      validation(ipad);
 
-    function ver (){
-      if(menu.classList.contains('is-active')){
-        menu.classList.remove('is-active')
-    }else{
-    menu.classList.add('is-active')
-      }
-    }
+        function ver (){
+            if(menu.classList.contains('is-active')){
+                menu.classList.remove('is-active')
+            }else{
+                menu.classList.add('is-active') 
+            }
+        }
     </script>
 </body>
 </html>
