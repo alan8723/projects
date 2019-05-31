@@ -5,11 +5,15 @@
     <title>Alan Paez</title>
     <link rel="icon" href="imagenes/logoW.jpg">
     <link rel="stylesheet" href="portafolio.css">
+    <link rel="stylesheet" href="fonts/icon.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arvo|Bitter" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <div class="icon-container">
+        <i class="icon-list2" id="burgerMenu"></i>
+    </div>
     <header>
     <div class="container">
         <figure>
@@ -108,5 +112,33 @@
             </div>
         </div>
     </div> 
+    <script>
+    const menu = document.querySelector('.menu')
+    const burgerMenu = document.getElementById('#burgerMenu')
+
+    const ipad = window.matchMedia('screen and (max-width: 480px)')
+
+    addEventListener('click', ver)
+
+    ipad.addListener(validation)
+
+    function validation (event) {
+      if (event.matches){
+    burgerMenu.addEventListener('click', ver)
+      }else{
+    burgerMenu.removeEventListener('click', ver)
+      }
+    }
+
+    validation(ipad)
+
+    function ver (){
+      if(menu.classList.contains('is-active')){
+        menu.classList.remove('is-active')
+    }else{
+    menu.classList.add('is-active')
+      }
+    }
+    </script>
 </body>
 </html>

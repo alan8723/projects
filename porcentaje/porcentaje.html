@@ -6,33 +6,38 @@
     <title>Calcula tu porcentaje</title>
     <link href="https://fonts.googleapis.com/css?family=Arimo|Merriweather" rel="stylesheet">
     <link rel="stylesheet" href="porcentaje.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header>
         <h1>calcula tu <strong>porcentaje</strong><br /> y haz <br /> <strong>aumentos y descuentos</strong></h1>
     </header>
-    <section class="form">
-        <div>
-            <h3><strong>ingrese los datos:</strong></h3>
-            <label for="valor">ingrese el valor:</label><br />
-            <input type="text" id="valor"  placeholder="valor" ><br />
-            <h3><strong>el porcentaje de descuento/aumento:</strong></h3>
-            <h1></h1>
-            <label for="porcentaje">ingrese el porcentaje:</label><br/>
-            <input type="text" id="porcentaje"  placeholder="porcentaje" ><br />
-        
-            <input type="button" value="Aumento" id="aumento">
-            <input type="button" value="Descuento" id="descuento"> <br />
-        </div>
-    </section>
 
-    <section class="result">
-        <p><strong>=</strong></p>
-        <p>el valor final:</p>
-        <input type= "text" readonly  placeholder="Resultado" id="resultado"><br />
-        <p>lo descontado/aumentado:</p>
-        <input type= "text" readonly  placeholder="Resultado2" id="resultado2"><br />
-    </section>
+    <div class="container">
+        <section class="form">
+            <div>
+                <h3><strong>ingrese los datos:</strong></h3>
+                <label for="valor">ingrese el valor:</label><br />
+                <input type="text" id="valor"  placeholder="valor" ><br />
+                <h3><strong>el porcentaje de descuento/aumento:</strong></h3>
+                <h1></h1>
+                <label for="porcentaje">ingrese el porcentaje:</label><br/>
+                <input type="text" id="porcentaje"  placeholder="porcentaje" ><br />
+            
+                <input type="button" value="Aumento" id="aumento">
+                <input type="button" value="Descuento" id="descuento"> <br />
+            </div>
+        </section>
+    
+        <section class="result">
+            <p><strong>=</strong></p>
+            <p>el valor final:</p>
+            <input type= "text" readonly  placeholder="Resultado" id="resultado"><br />
+            <p>lo descontado/aumentado:</p>
+            <input type= "text" readonly  placeholder="Resultado2" id="resultado2"><br />
+        </section>
+    </div>
+
 
     <script src="porcentaje.js"></script>
 

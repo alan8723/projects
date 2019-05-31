@@ -152,7 +152,7 @@ color: #263843;
   border: 1px solid blue;
   color: blue;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .contact{
@@ -185,6 +185,23 @@ color: #263843;
   background-image: url(imagenes/facebook.svg);
   background-size: 40px;
 }
+
+.icon-container{
+  border-radius:  25px;
+  background-color: black;
+  position: fixed;
+  width: 2.5em;
+  height: 2.5em;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 0 10px;
+  z-index: 2;
+}
+.icon-list2{
+  color: #ffffff
+}
+
 
 @media screen and (max-width: 1024px){
   .project{
@@ -223,6 +240,12 @@ color: #263843;
 }
 
 @media screen and (max-width: 480px){
+  .icon-container{
+    display: flex;
+  }
+  .cursos{
+    margin-bottom: 20px
+  }
   .project-imageContainer{
     width: 100%;
   }
@@ -233,12 +256,35 @@ color: #263843;
   .project-imageContainer img{
     width: 100%
   }
-}
-
-@media screen and (max-width: 320px){
   .cursos ul{
     display: initial;
   }
+  .menu{
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    bottom: 0;
+    background: rgba(0, 0, 0, .8);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+  }
+  .menu.is-active{
+    left: 0;
+  }
+  .menu ul{
+    display: initial;
+  }
+  .menu a{
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 320px){
+
   .contact{
     margin-top: 15px;
     padding-bottom:10px;
