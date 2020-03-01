@@ -145,7 +145,7 @@ color: #d84f00;
 }
 
 .cursos{
-  display: block;
+  display: flex;
   flex-wrap: wrap;
 }
 
