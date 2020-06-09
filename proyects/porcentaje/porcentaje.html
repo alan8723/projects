@@ -13,30 +13,36 @@
         <h1>calcula tu <strong>porcentaje</strong><br /> y haz <br /> <strong>aumentos y descuentos</strong></h1>
     </header>
 
-    <div class="container">
-        <section class="form">
+    <section class="form">
+        <div class="container">
             <div>
                 <h3><strong>ingrese los datos:</strong></h3>
                 <label for="valor">ingrese el valor:</label><br />
                 <input type="text" id="valor"  placeholder="valor" ><br />
-                <h3><strong>el porcentaje de descuento/aumento:</strong></h3>
                 <h1></h1>
                 <label for="porcentaje">ingrese el porcentaje:</label><br/>
-                <input type="text" id="porcentaje"  placeholder="porcentaje" ><br />
+                <input type="text" id="porcentaje"  placeholder="porcentaje" >%<br />
             
+                <h3><strong>Seleccione aumento o descuento:</strong></h3>
                 <input type="button" value="Aumento" id="aumento">
                 <input type="button" value="Descuento" id="descuento"> <br />
+
+                <h3><strong>Resultado:</strong></h3>
+                <p>el valor final:</p>
+                <input type= "text" readonly  placeholder="Resultado" id="resultado"><br />
+                <p>lo descontado/aumentado:</p>
+                <input type= "text" readonly  placeholder="Resultado2" id="resultado2"><br />
             </div>
+            <div class="Ejemplo">
+                <h3>Ejemplo:
+                </h3>
+                <h5>valor = 1000<br />porcentaje = 25 <br /> valor final: con aumento 1250/ con descuento 750 <br />
+                    el descuento/aumento es = 250  
+                </h5>
+            </div>
+        </div>
         </section>
-    
-        <section class="result">
-            <p><strong>=</strong></p>
-            <p>el valor final:</p>
-            <input type= "text" readonly  placeholder="Resultado" id="resultado"><br />
-            <p>lo descontado/aumentado:</p>
-            <input type= "text" readonly  placeholder="Resultado2" id="resultado2"><br />
-        </section>
-    </div>
+
 
 
     <script src="porcentaje.js"></script>

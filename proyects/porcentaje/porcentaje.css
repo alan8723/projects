@@ -9,9 +9,9 @@ header{
 }
 body{
   margin: 0px;
-  background: aquamarine;
   font-family: 'Merriweather', serif;
-  background-image: url(imagenes/4.jpg);
+  background: rgb(207, 202, 248);
+  /*background-image: url(imagenes/4.jpg);*/
   background-position: right;
  
   }
@@ -29,7 +29,7 @@ body{
   section {
     color: green;
     padding: 5px 20px;
-    margin: 10px 20px
+    margin: 10px 20px;
   }
   footer{
     color: #fafafa;
@@ -38,7 +38,15 @@ body{
   }
 
   .container{
-    margin: 20px auto;
+    
+    border: 1px solid rgb(17, 17, 17);
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    width: fit-content;
+  }
+
+  .Ejemplo {
+    color: rgb(0, 0, 112);
+    margin: 40px;
   }
