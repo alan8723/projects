@@ -4,6 +4,7 @@ const naranja = document.getElementById('naranja')
 const verde = document.getElementById('verde')
 const btnEmpezar = document.getElementById('btnEmpezar')
 const ULTIMO_NIVEL = 12
+const BOTONLUZ = document.getElementById("luz");
 
 class Juego {
   constructor() {
@@ -40,8 +41,10 @@ class Juego {
 
   siguienteNivel(){
     this.subnivel = 0
+    this.eliminarEventosClick();
     this.iluminarSecuencia()
-    this.agregarEventosClick()
+    setTimeout(()=> this.agregarEventosClick(), 1000 * this.nivel )
+    //this.agregarEventosClick()
   }
 
   transformarNumAColor(numero){
@@ -92,17 +95,20 @@ class Juego {
     this.colores.verde.addEventListener('click', this.elegirColor)
     this.colores.violeta.addEventListener('click', this.elegirColor)
     this.colores.naranja.addEventListener('click', this.elegirColor)
+    BOTONLUZ.style.backgroundColor = "green";
   }
   eliminarEventosClick(){
     this.colores.celeste.removeEventListener('click', this.elegirColor)
     this.colores.verde.removeEventListener('click', this.elegirColor)
     this.colores.violeta.removeEventListener('click', this.elegirColor)
     this.colores.naranja.removeEventListener('click', this.elegirColor)
+    BOTONLUZ.style.backgroundColor = "red";
   }
 
   elegirColor(ev){
   const nombreColor = ev.target.dataset.color
   const numeroColor = this.transformarColorANum (nombreColor)
+  console.log("b " + nombreColor);
   this.iluminarColor(nombreColor)
   if(numeroColor === this.secuencia[this.subnivel]){
     this.subnivel++
@@ -121,12 +127,12 @@ class Juego {
   }
 
   ganoElJuego(){
-    swal('platzi', 'felicitaciones, ganaste el juego', 'succes')
+    swal('felicitaciones, ganaste el juego', 'increible memoria')
     .then(this.inicializar)
   }
 
   perdioEljuego(){
-    swal('platzi', 'lo lamentamos, perdiste :(', 'succes')
+    swal( 'lo lamentamos, perdiste :(', 'sigue intentando!' )
     .then(() => {
       this.eliminarEventosClick()
       this.inicializar()

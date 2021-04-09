@@ -5,6 +5,13 @@ body {
   height: 100vh;
 }
 
+.luz{
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    border-radius: 10px;
+}
+
 h1{
   color: #830000
 }
