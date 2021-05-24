@@ -15,24 +15,6 @@
 
     <section class="form">
         <div class="container">
-            <div>
-                <h3><strong>ingrese los datos:</strong></h3>
-                <label for="valor">ingrese el valor:</label><br />
-                <input type="text" id="valor"  placeholder="valor" ><br />
-                <h1></h1>
-                <label for="porcentaje">ingrese el porcentaje:</label><br/>
-                <input type="text" id="porcentaje"  placeholder="porcentaje" >%<br />
-            
-                <h3><strong>Seleccione aumento o descuento:</strong></h3>
-                <input type="button" value="Aumento" id="aumento">
-                <input type="button" value="Descuento" id="descuento"> <br />
-
-                <h3><strong>Resultado:</strong></h3>
-                <p>el valor final:</p>
-                <input type= "text" readonly  placeholder="Resultado" id="resultado"><br />
-                <p>lo descontado/aumentado:</p>
-                <input type= "text" readonly  placeholder="Resultado2" id="resultado2"><br />
-            </div>
             <div class="Ejemplo">
                 <h3>Ejemplo:
                 </h3>
@@ -40,10 +22,37 @@
                     el descuento/aumento es = 250  
                 </h5>
             </div>
+            <div>
+                <h3><strong>ingrese los datos:</strong></h3>
+                <label for="valor">ingrese el valor:</label><br />
+                <input type="text" id="valor"  placeholder="valor" class="cajita" ><br />
+                <h1></h1>
+                <label for="porcentaje">ingrese el porcentaje:</label><br/>
+                <input type="text" class="cajita" id="porcentaje"  placeholder="porcentaje" >%<br />
+            
+                <h3><strong>Seleccione aumento o descuento:</strong></h3>
+                <input type="button" value="Aumento" id="aumento">
+                <input type="button" value="Descuento" id="descuento"> <br />
+
+                <h3><strong>Resultado:</strong></h3>
+                <p>el valor final:</p>
+                <input type= "text" class="cajitaR" readonly  placeholder="Resultado" id="resultado"><br />
+                <p>lo descontado/aumentado:</p>
+                <input type= "text" class="cajitaR" readonly  placeholder="Resultado2" id="resultado2"><br />
+            </div>
+        </div>
+        <H3>Otros casos:</H3>
+        <div class="containerO">
+            <div class="calculos">
+                CASO A Si <input type="text" class="cajita" id="totalCasoA" > es el 100% <input type="text" class="cajita" id="cantidadCasoA"> 
+                es el <input type="text" class="cajitaR" value="Resultado" id="porcentajeCasoA">%<input type="button" value="Calcular" id="calcularCasoA">
+            </div>
+            <div class="calculos">
+                CASO B Si <input type="text" class="cajita" id="cantidadCasoB"> es el <input type="text" class="cajita" id="porcentajeCasoB">%
+                 el 100% es <input type="text" class="cajitaR" value="Resultado" id="totalCasoB"> <input type="button" value="Calcular" id="calcularCasoB">
+            </div>
         </div>
         </section>
-
-
 
     <script src="porcentaje.js"></script>
 

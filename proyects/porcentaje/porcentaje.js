@@ -4,14 +4,20 @@ var valor;
 var porcentaje;
 var resultado;
 var cajitaFeliz;
+//var calculadoraP = new CalculosPorcentjes();
+
 
 cajitaFeliz = document.getElementById("resultado");
 
 botonA = document.getElementById("aumento");
 botonF = document.getElementById("descuento");
+botonCasoA = document.getElementById("calcularCasoA");
+botonCasoB = document.getElementById("calcularCasoB");
 
-botonA.addEventListener("click", mostrarAumento)
-botonF.addEventListener("click", mostrarDescuento)
+botonA.addEventListener("click", mostrarAumento);
+botonF.addEventListener("click", mostrarDescuento);
+botonCasoA.addEventListener("click", calcularCasoA);
+botonCasoB.addEventListener("click", calcularCasoB);
 
 
 function mostrarDescuento()
@@ -41,8 +47,8 @@ function mostrarDescuento()
     resultado = valor - descuento;
     console.log(resultado);
 
-    cajitaFeliz = document.getElementById("resultado").value = resultado;
-    document.getElementById("resultado2").value = descuento;
+    cajitaFeliz = document.getElementById("resultado").value = resultado.toFixed(2);
+    document.getElementById("resultado2").value = descuento.toFixed(2);
     }
 
 function mostrarAumento()
@@ -71,7 +77,26 @@ function mostrarAumento()
     aumento = valor * porcentaje;
     resultado = valor + aumento;
 
-    cajitaFeliz = document.getElementById("resultado").value = resultado;
-    document.getElementById("resultado2").value = aumento;
+    cajitaFeliz = document.getElementById("resultado").value = resultado.toFixed(2);
+    document.getElementById("resultado2").value = aumento.toFixed(2);
 
-} //toString()
+} 
+
+function calcularCasoA(){
+    var total = document.getElementById("totalCasoA").value;
+    var cantidad = document.getElementById("cantidadCasoA").value;
+
+    var cantidadAux = cantidad * 100
+    var porcentaje = cantidadAux / total;
+    document.getElementById("porcentajeCasoA").value = porcentaje.toFixed(2); 
+}
+
+function calcularCasoB(){
+    var cantidad = document.getElementById("cantidadCasoB").value;
+    var porcentaje = document.getElementById("porcentajeCasoB").value;
+
+    var cantidadAux = cantidad / porcentaje;
+    var total = cantidadAux * 100;
+    document.getElementById("totalCasoB").value = total.toFixed(2);
+}
+//toString()
