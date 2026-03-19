@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Alan Paez</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="imagenes/logoW.jpg">
     <link rel="stylesheet" href="portafolio.css">
     <link rel="stylesheet" href="fonts/icon.css">
@@ -10,98 +14,115 @@
     <link href="https://fonts.googleapis.com/css?family=Arvo|Bitter" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
     <div class="icon-container" id="burgerMenu">
         <i class="icon-list2"></i>
     </div>
     <header>
-    <div class="container">
-        <figure>
-            <img src="imagenes/logoW.jpg" >
-        </figure>
-        <nav class="menu" id="menu">
-            <ol>
-                <ul>
-                    <li>
-                        <a href="#proyectos">proyectos</a><br />
-                    </li>
-                    <li>
-                        <a href="#conocimientos">conocimientos</a><br />
-                    </li>
-                    <li>
-                        <a href="#contacto">contacto</a> <br />
-                    </li>
-                </ul>
-            </ol>
-        </nav>
-    </div>
-    </header>
-     <section class="hero">
-    <div class="container">
-        <h1>
-            Hola! soy Alan Paez <br /> <strong>Programador </strong><br/>con pasión por <br /> <strong> los videojuegos</strong>
-        </h1>
-        <!--<img class="img-hero" src="imagenes/hero.jpg" alt="" width="400" height="300">-->
-    </div>
-    </section>
-     <div class="container">
-    <h2>
-            Proyectos
-    </h2>
-    </div> 
-     <section id="proyectos" class="project-list">
-        <div class="container">
-            <h3>Aquí algunos de los proyectos en los que trabaje para poner en practica lo aprendido:</h3>
-            <article class="project">
-                <figure class="project-imageContainer">
-                    <img src="imagenes/porcentajes.png" alt="imagen de proyecto">
-                </figure>
-                <div class="project-details">
-                    <p>En este proyecto creé el algoritmo que permite calcular aumentos y descuentos tambien podemos ver lo descontado o aumentado. <br /> aquí pongo en practica conocimentos basicos de html, css y javascrypt </p>
-                    <a href="proyects/porcentaje/porcentaje.html" target="_blank">ver</a>
-                </div>
-            </article>
-            <article class="project">
-                <figure class="project-imageContainer">
-                    <img src="imagenes/juego-simon.png" alt="imagen de proyecto">
-                </figure>
-                <div class="project-details">
-                    <p> En este proyecto creé el famoso juego de "simon dice". <br /> poniendo en practica conocimientos de html, css y en especial de javascrypt </p>
-                    <a href="proyects/simonDice/juego.html" target="_blank">ver</a>
-                </div>
-            </article>
-            <article class="project">
-                <figure class="project-imageContainer">
-                    <img src="imagenes/ninjaZcollage.jpg" alt="imagen de proyecto">
-                </figure>
-                <div class="project-details">
-                    <p> En este proyecto creé un juego usando el motor godot Poniendo en practica conocimientos mis conocimientos en programación.<br/>
-                    programado en python, es un juego simple con coleccionables, power up,un enemigo, tiempo, niveles y puntos  </p>
-                    <a href="proyects/NinjaZ/index.html" target="_blank">ver</a>
-                </div>
-            </article>
+        <div class="container-header">
+            <h1>Alan Paez</h1>
+            <p class="descripcion">Programador Camino a Full Stack</p>
+            <nav class="menu" id="menu">
+                <ol>
+                    <ul>
+                        <li class="nav-proyectos">
+                            <a href="#proyectos" class="nav-proyectos">proyectos</a>
+                        </li>
+                        <li class="nav-conocimientos">
+                            <a href="#conocimientos" class="nav-conocimientos">conocimientos</a>
+                        </li>
+                        <li class="nav-contacto">
+                            <a href="#contacto" class="nav-contacto">contacto</a>
+                        </li>
+                    </ul>
+                </ol>
+            </nav>
+
         </div>
-    </section> 
-     <section id="conocimientos" class="knowledge">
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>
+                Hola! soy Alan Paez Programador y entusiasta de la tecnología</h1>
+            <!--<img class="img-hero" src="imagenes/hero.jpg" alt="" width="400" height="300">-->
+        </div>
+    </section>
+    <h2 class="sub-title">Proyectos</h2>
+    <h3 class="title-project">Aquí algunos de los proyectos en los que trabaje para poner en practica lo aprendido:
+    </h3>
+    <section id="proyectos" class="project-list carousel">
+        <button class="carousel-btn prev">‹</button>
+
+        <div class="carousel-window">
+
+            <div class="carousel-track project-container">
+
+                <article class="project">
+                    <figure class="project-imageContainer">
+                        <img src="imagenes/porcentajes.png" alt="imagen de proyecto">
+                    </figure>
+                    <div class="project-details">
+                        <p>En este proyecto creé el algoritmo que permite calcular aumentos y descuentos tambien podemos
+                            ver
+                            lo descontado o aumentado. <br /> aquí pongo en practica conocimentos basicos de html, css y
+                            javascrypt </p>
+                        <a href="proyects/porcentaje/porcentaje.html" target="_blank">ver</a>
+                    </div>
+                </article>
+                <article class="project">
+                    <figure class="project-imageContainer">
+                        <img src="imagenes/juego-simon.png" alt="imagen de proyecto">
+                    </figure>
+                    <div class="project-details">
+                        <p> En este proyecto creé el famoso juego de "simon dice". <br /> poniendo en practica
+                            conocimientos
+                            de html, css y en especial de javascrypt </p>
+                        <a href="proyects/simonDice/juego.html" target="_blank">ver</a>
+                    </div>
+                </article>
+                <article class="project">
+                    <figure class="project-imageContainer">
+                        <img src="imagenes/ninjaZcollage.jpg" alt="imagen de proyecto">
+                    </figure>
+                    <div class="project-details">
+                        <p> En este proyecto creé un juego usando el motor godot Poniendo en practica conocimientos mis
+                            conocimientos en programación.<br />
+                            programado en python, es un juego simple con coleccionables, power up,un enemigo, tiempo,
+                            niveles y puntos </p>
+                        <a href="proyects/NinjaZ/index.html" target="_blank">ver</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <button class="carousel-btn next">›</button>
+    </section>
+    <section id="conocimientos" class="knowledge">
+        <h2 class="sub-title">Conocimientos</h2>
         <div class="container">
             <div class="tDiploma">
                 <h4>programación</h4>
             </div>
             <div class="cursos">
                 <ul>
-                    <p >Curso de programacion basica </p><a class="diploma" target="_blanck" href="diplomas/programacion/diploma-programacion-basica.pdf">ver certificado</a>
+                    <p>Curso de programacion basica </p><a class="diploma" target="_blanck"
+                        href="diplomas/programacion/diploma-programacion-basica.pdf">ver certificado</a>
                 </ul>
                 <ul>
-                    <p>Curso de fundamentos de javascrypt </p><a class="diploma" target="_blank" href="diplomas/programacion/diploma-fundamentos-javascript.pdf">ver certificado</a>
-                </ul>               
-                <ul>
-                    <p>Curso de programacion orientada a objetos </p><a class="diploma" target="_blank" href="diplomas/programacion/diploma-oop.pdf">ver certificao</a>
+                    <p>Curso de fundamentos de javascrypt </p><a class="diploma" target="_blank"
+                        href="diplomas/programacion/diploma-fundamentos-javascript.pdf">ver certificado</a>
                 </ul>
                 <ul>
-                    <p>Curso de programacion lenguaje c </p><a class="diploma" target="_blank" href="diplomas/programacion/diploma-lenguaje-c.pdf">ver certificao</a>
+                    <p>Curso de programacion orientada a objetos </p><a class="diploma" target="_blank"
+                        href="diplomas/programacion/diploma-oop.pdf">ver certificao</a>
                 </ul>
                 <ul>
-                    <p>Curso de programacion estructurada </p><a class="diploma" target="_blank" href="diplomas/programacion/diploma-programacion-estructurada.pdf">ver certificao</a>
+                    <p>Curso de programacion lenguaje c </p><a class="diploma" target="_blank"
+                        href="diplomas/programacion/diploma-lenguaje-c.pdf">ver certificao</a>
+                </ul>
+                <ul>
+                    <p>Curso de programacion estructurada </p><a class="diploma" target="_blank"
+                        href="diplomas/programacion/diploma-programacion-estructurada.pdf">ver certificao</a>
                 </ul>
             </div>
             <div class="tDiploma">
@@ -109,59 +130,76 @@
             </div>
             <div class="cursos">
                 <ul>
-                    <p>Curso de desarrollado web online </p><a class="diploma" target="_blanck" href="diplomas/desarrolloFrontEnd/diploma-html5-css3.pdf">ver certificado</a>
+                    <p>Curso de desarrollado web online </p><a class="diploma" target="_blanck"
+                        href="diplomas/desarrolloFrontEnd/diploma-html5-css3.pdf">ver certificado</a>
                 </ul>
                 <ul>
-                    <p>Curso de responsive design </p><a class="diploma" target="_blank" href="diplomas/desarrolloFrontEnd/diploma-responsive-design.pdf">ver certificao</a>
+                    <p>Curso de responsive design </p><a class="diploma" target="_blank"
+                        href="diplomas/desarrolloFrontEnd/diploma-responsive-design.pdf">ver certificao</a>
                 </ul>
             </div>
-            <div class="tDiploma"> <h4>Java</h4></div>
-            <ul>
-            <div class="cursos">
-                <ul>
-                <p>Curso de introduccion a java </p><a class="diploma" target="_blank" href="diplomas/java/diploma-java-basico.pdf">ver certificao</a>
-                </ul>
-                <ul>
-                    <p>Curso de java orientado a objetos</p><a class="diploma" target="_blank" href="diplomas/java/diploma-responsive-design.pdf">ver certificao</a>
-                </ul>
-                <ul>
-                    <p>Curso de Java SE Persistenci de Datos</p><a class="diploma" target="_blank" href="diplomas/java/diploma-java-persistencia.pdf">ver certificao</a>
-                </ul>
-                <ul>
-                    <p>Curso de Java avansado</p><a class="diploma" target="_blank" href="diplomas/java/Java Avanzado PlatziSlides.pdf">ver certificao</a>
-                </ul>
-                <ul>
-                    <p>desarrollo backend con java</p><a class="diploma" target="_blank" href="diplomas/java/diploma-desarrollo-java.pdf">ver certificao</a>
-                </ul>
-            </div>
-
             <div class="tDiploma">
-                <h4>Otros cursos</h4>
+                <h4>Java</h4>
             </div>
-            <div class="cursos">
-                <ul>
-                    <p>Curso profecional de git y github 2017</p><a class="diploma" target="_blank" href="diplomas/diploma-git-github-2017.pdf">ver certificado</a>
-                </ul>
-                <ul>
-                    <p>Curso ingles basico</p><a class="diploma" target="_blank" href="diplomas/diploma-ingles-basico.pdf">ver certificado</a>
-                </ul>
-            </div>
+            <ul>
+                <div class="cursos">
+                    <ul>
+                        <p>Curso de introduccion a java </p><a class="diploma" target="_blank"
+                            href="diplomas/java/diploma-java-basico.pdf">ver certificao</a>
+                    </ul>
+                    <ul>
+                        <p>Curso de java orientado a objetos</p><a class="diploma" target="_blank"
+                            href="diplomas/java/diploma-responsive-design.pdf">ver certificao</a>
+                    </ul>
+                    <ul>
+                        <p>Curso de Java SE Persistenci de Datos</p><a class="diploma" target="_blank"
+                            href="diplomas/java/diploma-java-persistencia.pdf">ver certificao</a>
+                    </ul>
+                    <ul>
+                        <p>Curso de Java avansado</p><a class="diploma" target="_blank"
+                            href="diplomas/java/Java Avanzado PlatziSlides.pdf">ver certificao</a>
+                    </ul>
+                    <ul>
+                        <p>desarrollo backend con java</p><a class="diploma" target="_blank"
+                            href="diplomas/java/diploma-desarrollo-java.pdf">ver certificao</a>
+                    </ul>
+                </div>
+
+                <div class="tDiploma">
+                    <h4>Otros cursos</h4>
+                </div>
+                <div class="cursos">
+                    <ul>
+                        <p>Curso profecional de git y github 2017</p><a class="diploma" target="_blank"
+                            href="diplomas/diploma-git-github-2017.pdf">ver certificado</a>
+                    </ul>
+                    <ul>
+                        <p>Curso ingles basico</p><a class="diploma" target="_blank"
+                            href="diplomas/diploma-ingles-basico.pdf">ver certificado</a>
+                    </ul>
+                </div>
         </div>
-    </section> 
-     <div id="contacto" class="contact">
-        <div class="container">
-            <div>
-                <h2>contacto</h2> 
-            <h4>Pongamonos en contacto</h4>
-            </div>
-            <div class="social">
-                <a href="https://www.instagram.com/alhan_k_ace/" target="_blank" class="social-link instagram"></a>
-                <a href="https://github.com/alan8723" target="_blank" class="social-link github" ></a>
-                <a href="https://www.facebook.com/aalan.d.alan" target="_blank" target="_blank" class="social-link facebook" ></a>
-            </div>
+    </section>
+    <div id="contacto" class="contact">
+
+        <div>
+            <h2 class="sub-title">contacto</h2>
+            <p class="descripcion">Pongamonos en contacto</p>
         </div>
-    </div> 
+        <div class="social">
+            <a href="https://www.instagram.com/alhan_k_ace/" target="_blank" class="social-link instagram"></a>
+            <a href="https://github.com/alan8723" target="_blank" class="social-link github"></a>
+            <a href="https://www.facebook.com/aalan.d.alan" target="_blank" target="_blank"
+                class="social-link facebook"></a>
+        </div>
+    </div>
+
     <script>
+        const track = document.querySelector('.carousel-track')
+        const slides = document.querySelectorAll('.project')
+        const next = document.querySelector('.next')
+        const prev = document.querySelector('.prev')
+
         const ipad = window.matchMedia('screen and (max-width: 767px)')
         const burgerMenu = document.getElementById('burgerMenu')
         const menu = document.getElementById('menu')
@@ -169,22 +207,55 @@
         ipad.addListener(validation)
 
         function validation(event) {
-        if (event.matches) {
-          burgerMenu.addEventListener('click', ver)
-        } else {
-          burgerMenu.removeEventListener('click', ver)
-        }
-      }
-
-      validation(ipad);
-
-        function ver (){
-            if(menu.classList.contains('is-active')){
-                menu.classList.remove('is-active')
-            }else{
-                menu.classList.add('is-active') 
+            if (event.matches) {
+                burgerMenu.addEventListener('click', ver)
+            } else {
+                burgerMenu.removeEventListener('click', ver)
             }
         }
+
+        validation(ipad);
+
+        function ver() {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active')
+            } else {
+                menu.classList.add('is-active')
+            }
+        }
+
+        let index = 0
+        let interval = null
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 60}%)`
+        }
+
+        next.addEventListener('click', () => {
+            index = (index + 1) % slides.length
+            updateCarousel()
+        })
+
+        prev.addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length
+            updateCarousel()
+        })
+
+        function startAutoPlay() {
+            interval = setInterval(() => {
+                next.click()
+            }, 3000)
+        }
+
+        function stopAutoPlay() {
+            clearInterval(interval)
+        }
+
+        track.addEventListener('mouseenter', stopAutoPlay)
+        track.addEventListener('mouseleave', startAutoPlay)
+
+        startAutoPlay()
     </script>
 </body>
+
 </html>
