@@ -7,12 +7,31 @@
   --text-color: #2D3748;
   --text-color2: #888888;
   --border-color: #CBD5E0;
+  --bg-color: #FFFFFF;
+  --hero-bg: #e5edfc; 
+  --text-main: #2D3748;
 }
 
 body {
   background: var(--white);
+  color: var(--text-color);
   font-family: 'Inter', sans-serif;
   margin: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+body.dark-mode{
+  --white: #1A202C;       /* Fondo oscuro principal */
+  --gray: #2D3748;        /* Color secundario oscuro */
+  --text-color: #E2E8F0;  /* Texto claro para leer en fondo oscuro */
+  --text-color2: #A0AEC0;
+  --hero-bg: #2b3a4e;    /* Fondo para la sección hero en modo oscuro */
+  --color-primary: #63B3ED;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #2D3748; /* Un color oscuro para el botón */
+    color: var(--color-primary); /* El color azul que definimos antes para contraste */
+    border: 1px solid var(--color-primary);
 }
 
 header {
@@ -39,6 +58,13 @@ header {
   height: inherit;
   flex-wrap: inherit;
   flex: .95;
+}
+
+#theme-toggle {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px;
 }
 
 
@@ -114,73 +140,46 @@ h3 {
 .hero {
   display: flex;
   margin: 0 12px;
-  background-color: var(--color-secondary);
+  background-color: var(--hero-bg);
   background-position: right;
   padding: 12px;
   justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
 .project {
-  margin: 10px;
-  max-width: 480px;
   flex-shrink: 0;
   border-radius: 10px;
   background-color: #c2e8fd;
-  -webkit-box-shadow: -18px 16px 2px 1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -18px 16px 2px 1px rgba(0, 0, 0, 0.75);
-  box-shadow: -10px 10px 2px 1px rgba(0, 0, 0, 0.75);
-  min-width: 50%;
+  flex: 1;
+  transition: flex 0.5s ease;
+  overflow: hidden;
+}
+.project:hover {
+  flex: 1.2;
 }
 
 .project-container {
-  display: flex;
+    display: flex;
+    height: 450px;
+    gap: 15px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .project-list {
   display: block;
 }
 
-.carousel {
-  position: relative;
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 12px;
-}
-
-.carousel-window {
-  overflow: hidden;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.6s ease;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--color-primary);
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
 
 
 .project-imageContainer {
   margin: 0;
+}
+.project img {
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    width: 100%;
 }
 
 .project-details {
@@ -414,7 +413,17 @@ h3 {
   .nav-contacto {
     margin: 10px auto;
   }
+  .project-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .project {
+        height: 200px;
+        flex: none; /* Desactiva el efecto flex en móviles */
+    }
+
 }
+
 
 @media screen and (max-width: 320px) {
 

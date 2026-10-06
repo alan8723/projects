@@ -21,6 +21,7 @@
     </div>
     <header>
         <div class="container-header">
+            <button id="theme-toggle" style="cursor: pointer;">🌙 / ☀️</button>
             <h1>Alan Paez</h1>
             <p class="descripcion">Programador Camino a Full Stack</p>
             <nav class="menu" id="menu">
@@ -51,51 +52,45 @@
     <h2 class="sub-title">Proyectos</h2>
     <h3 class="title-project">Aquí algunos de los proyectos en los que trabaje para poner en practica lo aprendido:
     </h3>
-    <section id="proyectos" class="project-list carousel">
-        <button class="carousel-btn prev">‹</button>
-
-        <div class="carousel-window">
-
-            <div class="carousel-track project-container">
-
-                <article class="project">
-                    <figure class="project-imageContainer">
-                        <img src="imagenes/porcentajes.png" alt="imagen de proyecto">
-                    </figure>
-                    <div class="project-details">
-                        <p>En este proyecto creé el algoritmo que permite calcular aumentos y descuentos tambien podemos
-                            ver
-                            lo descontado o aumentado. <br /> aquí pongo en practica conocimentos basicos de html, css y
-                            javascrypt </p>
-                        <a href="proyects/porcentaje/porcentaje.html" target="_blank">ver</a>
-                    </div>
-                </article>
-                <article class="project">
-                    <figure class="project-imageContainer">
-                        <img src="imagenes/juego-simon.png" alt="imagen de proyecto">
-                    </figure>
-                    <div class="project-details">
-                        <p> En este proyecto creé el famoso juego de "simon dice". <br /> poniendo en practica
-                            conocimientos
-                            de html, css y en especial de javascrypt </p>
-                        <a href="proyects/simonDice/juego.html" target="_blank">ver</a>
-                    </div>
-                </article>
-                <article class="project">
-                    <figure class="project-imageContainer">
-                        <img src="imagenes/ninjaZcollage.jpg" alt="imagen de proyecto">
-                    </figure>
-                    <div class="project-details">
-                        <p> En este proyecto creé un juego usando el motor godot Poniendo en practica conocimientos mis
-                            conocimientos en programación.<br />
-                            programado en python, es un juego simple con coleccionables, power up,un enemigo, tiempo,
-                            niveles y puntos </p>
-                        <a href="proyects/NinjaZ/index.html" target="_blank">ver</a>
-                    </div>
-                </article>
-            </div>
+    <section id="proyectos" class="project-list">
+        <div class="project-container">
+            <article class="project">
+                <figure class="project-imageContainer">
+                    <img src="imagenes/porcentajes.png" alt="imagen de proyecto">
+                </figure>
+                <div class="project-details">
+                    <p>En este proyecto creé el algoritmo que permite calcular aumentos y descuentos tambien podemos
+                        ver
+                        lo descontado o aumentado. <br /> aquí pongo en practica conocimentos basicos de html, css y
+                        javascrypt </p>
+                    <a href="proyects/porcentaje/porcentaje.html" target="_blank">ver</a>
+                </div>
+            </article>
+            <article class="project">
+                <figure class="project-imageContainer">
+                    <img src="imagenes/juego-simon.png" alt="imagen de proyecto">
+                </figure>
+                <div class="project-details">
+                    <p> En este proyecto creé el famoso juego de "simon dice". <br /> poniendo en practica
+                        conocimientos
+                        de html, css y en especial de javascrypt </p>
+                    <a href="proyects/simonDice/juego.html" target="_blank">ver</a>
+                </div>
+            </article>
+            <article class="project">
+                <figure class="project-imageContainer">
+                    <img src="imagenes/ninjaZcollage.jpg" alt="imagen de proyecto">
+                </figure>
+                <div class="project-details">
+                    <p> En este proyecto creé un juego usando el motor godot Poniendo en practica conocimientos mis
+                        conocimientos en programación.<br />
+                        programado en python, es un juego simple con coleccionables, power up,un enemigo, tiempo,
+                        niveles y puntos </p>
+                    <a href="proyects/NinjaZ/index.html" target="_blank">ver</a>
+                </div>
+            </article>
         </div>
-        <button class="carousel-btn next">›</button>
+        
     </section>
     <section id="conocimientos" class="knowledge">
         <h2 class="sub-title">Conocimientos</h2>
@@ -195,66 +190,26 @@
     </div>
 
     <script>
-        const track = document.querySelector('.carousel-track')
-        const slides = document.querySelectorAll('.project')
-        const next = document.querySelector('.next')
-        const prev = document.querySelector('.prev')
 
-        const ipad = window.matchMedia('screen and (max-width: 767px)')
-        const burgerMenu = document.getElementById('burgerMenu')
-        const menu = document.getElementById('menu')
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
 
-        ipad.addListener(validation)
-
-        function validation(event) {
-            if (event.matches) {
-                burgerMenu.addEventListener('click', ver)
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            // Opcional: Guardar la preferencia en localStorage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
             } else {
-                burgerMenu.removeEventListener('click', ver)
+                localStorage.setItem('theme', 'light');
             }
+        });
+
+        // Cargar preferencia guardada
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
         }
-
-        validation(ipad);
-
-        function ver() {
-            if (menu.classList.contains('is-active')) {
-                menu.classList.remove('is-active')
-            } else {
-                menu.classList.add('is-active')
-            }
-        }
-
-        let index = 0
-        let interval = null
-
-        function updateCarousel() {
-            track.style.transform = `translateX(-${index * 60}%)`
-        }
-
-        next.addEventListener('click', () => {
-            index = (index + 1) % slides.length
-            updateCarousel()
-        })
-
-        prev.addEventListener('click', () => {
-            index = (index - 1 + slides.length) % slides.length
-            updateCarousel()
-        })
-
-        function startAutoPlay() {
-            interval = setInterval(() => {
-                next.click()
-            }, 3000)
-        }
-
-        function stopAutoPlay() {
-            clearInterval(interval)
-        }
-
-        track.addEventListener('mouseenter', stopAutoPlay)
-        track.addEventListener('mouseleave', startAutoPlay)
-
-        startAutoPlay()
+       
     </script>
 </body>
 
